@@ -12,5 +12,5 @@
   "function-runtime": "dotnet6",
   "function-memory-size": 128,
   "function-timeout": 3,
-  "function-handler": "LambdaAuth::Auth.Function::Handler"
+  "function-handler": "LambdaAuth::Auth.Function::Login"
 }

@@ -1,8 +1,6 @@
 # lambda-auth
 
-## Instruções para deploy e configuração da API Gateway
-
-### Deploy
+## Instruções para deploy no AWS Lambda
 
 É necessário que as configurações de acesso ao AWS já estejam configuradas.
 
@@ -33,7 +31,7 @@ Ao final do processo, a função lambda estará disponível no console da AWS.
 ![lambda console aws](./docs/lambda-console.png)
 
 
-### Configuração do API Gateway
+## Instruções de configuração da API Gateway
 
 Após a publicação selecione no console a função Lambda criada.
 

@@ -10,7 +10,7 @@ Instruções de configuração em [AWS Comand Line Interface](https://aws.amazon
 
 Siga os passos:
 
-1) Acesse a oasta do projeto com a função `src\LambadaAuth`;
+1) Acesse a pasta do projeto com a função `src\LambadaAuth`;
 
 2) Execute o comando: `dotnet lambda deploy-function`;
 

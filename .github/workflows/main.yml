@@ -29,9 +29,9 @@ jobs:
     - name: AWS CLI update
       run: dotnet tool update -g Amazon.Lambda.Tools
     - name: Restore dependencies
-      run: dotnet restore ./src/LambdaAuth.sln
+      run: dotnet restore LambdaAuth.sln
     - name: Build
-      run: dotnet build --no-restore ./src/LambdaAuth.sln
+      run: dotnet build --no-restore LambdaAuth.sln
     - name: Deploy to Lambda
-      working-directory: ./src/LambdaAuth
+      working-directory: ./LambdaAuth
       run: dotnet lambda deploy-serverless

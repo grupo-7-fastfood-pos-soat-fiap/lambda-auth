@@ -2,20 +2,22 @@ name: .NET
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+    - main
   pull_request:
-    branches: [ main ]
+    branches: 
+    - main
 
 defaults:
   run:
-    working-directory: ./Services
+    working-directory: ./src
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
     env: 
-      working-directory: ./Services
+      working-directory: ./src
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
@@ -24,13 +26,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 6.0.x
     - name: AWS CLI
       run: dotnet tool install -g Amazon.Lambda.Tools
     - name: Restore dependencies
-      run: dotnet restore Services.sln
+      run: dotnet restore LambdaAuth.sln
     - name: Build
-      run: dotnet build --no-restore Services.sln
+      run: dotnet build --no-restore LambdaAuth.sln
     - name: Deploy to Lambda
-      working-directory: ./Services/ApiServices
+      working-directory: ./src/LambdaAuth
       run: dotnet lambda deploy-serverless

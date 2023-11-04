@@ -1,9 +1,6 @@
 name: .NET
 
 on:
-  push:
-    branches: 
-    - main
   pull_request:
     branches: 
     - main
@@ -22,13 +19,15 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: AWS CLI
+    - name: AWS CLI install
       run: dotnet tool install -g Amazon.Lambda.Tools
+    - name: AWS CLI update
+      run: dotnet tool update -g Amazon.Lambda.Tools
     - name: Restore dependencies
       run: dotnet restore LambdaAuth.sln
     - name: Build

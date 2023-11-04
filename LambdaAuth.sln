@@ -5,23 +5,40 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F9FF61AA-85AD-4128-85A9-FF35EDAC9A01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth", "src\LambdaAuth\LambdaAuth.csproj", "{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaAuth", "src\LambdaAuth\LambdaAuth.csproj", "{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.Data", "src\LambdaAuth.Service\LambdaAuth.Data.csproj", "{28798A08-8127-4A92-A783-AA6248B5BAC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.BusinessObjects", "src\Lambda.BusinessObjects\LambdaAuth.BusinessObjects.csproj", "{B6D1E034-FE47-48AC-815C-18AD3047AB60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28798A08-8127-4A92-A783-AA6248B5BAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28798A08-8127-4A92-A783-AA6248B5BAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28798A08-8127-4A92-A783-AA6248B5BAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28798A08-8127-4A92-A783-AA6248B5BAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D1E034-FE47-48AC-815C-18AD3047AB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D1E034-FE47-48AC-815C-18AD3047AB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D1E034-FE47-48AC-815C-18AD3047AB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D1E034-FE47-48AC-815C-18AD3047AB60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{929DC044-B5DF-4D00-BDB7-F71DF3C945A8} = {F9FF61AA-85AD-4128-85A9-FF35EDAC9A01}
+		{28798A08-8127-4A92-A783-AA6248B5BAC9} = {F9FF61AA-85AD-4128-85A9-FF35EDAC9A01}
+		{B6D1E034-FE47-48AC-815C-18AD3047AB60} = {F9FF61AA-85AD-4128-85A9-FF35EDAC9A01}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9037E507-CC7F-49A3-80BA-58155C5417CE}
 	EndGlobalSection
 EndGlobal

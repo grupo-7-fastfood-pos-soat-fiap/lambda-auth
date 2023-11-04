@@ -70,5 +70,16 @@ Por fim, clique no botão `Ações` e, na sequência em `Implantar API`.
 
 ![api gateway deploy](./docs/api-gateway-deploy.png)
 
+
+### Configuração da Função Lambda
+
+Um último passo é efetuar o ajuste do time out para a função lambda.
+
+Acesse a guia `Configuração`, e clique no botão `Editar`.
+
+![lambda timeout](./docs/lambda-config-timeout.png)
+
+Ajuste para um tempo de 10 segundos.
+
 Pronto, o acesso à função Lambda pelo API Gateway já está disponível.
 

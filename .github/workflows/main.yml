@@ -4,9 +4,6 @@ on:
   push:
     branches: 
     - main
-  pull_request:
-    branches: 
-    - main
 
 defaults:
   run:
@@ -22,17 +19,19 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: AWS CLI
+    - name: AWS CLI install
       run: dotnet tool install -g Amazon.Lambda.Tools
+    - name: AWS CLI update
+      run: dotnet tool update -g Amazon.Lambda.Tools
     - name: Restore dependencies
-      run: dotnet restore LambdaAuth.sln
+      run: dotnet restore ./src/LambdaAuth.sln
     - name: Build
-      run: dotnet build --no-restore LambdaAuth.sln
+      run: dotnet build --no-restore ./src/LambdaAuth.sln
     - name: Deploy to Lambda
       working-directory: ./src/LambdaAuth
       run: dotnet lambda deploy-serverless

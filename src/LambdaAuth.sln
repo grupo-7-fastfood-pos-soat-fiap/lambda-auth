@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F9FF61AA-85AD-4128-85A9-FF35EDAC9A01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaAuth", "src\LambdaAuth\LambdaAuth.csproj", "{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LambdaAuth", "LambdaAuth\LambdaAuth.csproj", "{929DC044-B5DF-4D00-BDB7-F71DF3C945A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.Data", "src\LambdaAuth.Service\LambdaAuth.Data.csproj", "{28798A08-8127-4A92-A783-AA6248B5BAC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.Data", "LambdaAuth.Service\LambdaAuth.Data.csproj", "{28798A08-8127-4A92-A783-AA6248B5BAC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.BusinessObjects", "src\Lambda.BusinessObjects\LambdaAuth.BusinessObjects.csproj", "{B6D1E034-FE47-48AC-815C-18AD3047AB60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAuth.BusinessObjects", "Lambda.BusinessObjects\LambdaAuth.BusinessObjects.csproj", "{B6D1E034-FE47-48AC-815C-18AD3047AB60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

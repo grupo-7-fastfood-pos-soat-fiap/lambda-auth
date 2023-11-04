@@ -34,4 +34,4 @@ jobs:
       run: dotnet build --no-restore LambdaAuth.sln
     - name: Deploy to Lambda
       working-directory: ./src/LambdaAuth
-      run: dotnet lambda deploy-serverless
+      run: dotnet lambda deploy-function --function-name LambdaFiap --function-role RoleLambda --function-timeout 10 --region us-east-1

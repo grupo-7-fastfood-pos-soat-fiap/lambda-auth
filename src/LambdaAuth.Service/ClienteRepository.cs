@@ -1,15 +1,18 @@
 using LambdaAuth.BusinessObjects;
 using Npgsql;
+using System.Configuration;
 
 namespace LambdaAuth.Data
-{
+{    
     public class ClienteRepository
     {
         public Cliente GetByCpf(string cpf)
         {
             Cliente cliente = new Cliente();
 
-            var connectionString = @"Host=;Port=5432;Pooling=true;Database=;User Id=;Password=;Include Error Detail=true;";
+
+
+            var connectionString = @"STR_CONN";
 
             NpgsqlConnection conn = new NpgsqlConnection(connectionString);
             var dataSource = NpgsqlDataSource.Create(connectionString);

@@ -1,4 +1,3 @@
-using Amazon.Lambda.Annotations;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 using Auth.Models;
@@ -16,18 +15,11 @@ public class Function
 {
     private ClienteRepository _repository;
 
-    //public Function(ClienteContext context) {
-    //    Db = context;
-    //}
-
-    //Desabilitar na AWS em Lambda/Resources ANY -> Integration Request -> Use Lambda Proxy Integration
-    //Executar Action -> Deploy API
     public Output Login(string cpf, ILambdaContext context)
     {
         _repository = new ClienteRepository();
         Cliente? cliente = _repository.GetByCpf(cpf);
 
-        //Cliente? cliente = Db.Clientes.FirstOrDefault(cliente => cliente.Cpf == cpf);
         if (cliente == null)
             return new Output
             {

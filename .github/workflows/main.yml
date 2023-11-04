@@ -33,5 +33,5 @@ jobs:
     - name: Build
       run: dotnet build --no-restore LambdaAuth.sln
     - name: Deploy to Lambda
-      working-directory: ./LambdaAuth
+      working-directory: ./src/LambdaAuth
       run: dotnet lambda deploy-serverless

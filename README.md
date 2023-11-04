@@ -6,8 +6,9 @@
 
 Instruções de configuração em [AWS Comand Line Interface](https://aws.amazon.com/pt/cli/#:~:text=AWS%20Command%20Line%20Interface%201%20aws-shell%20%28Developer%20Preview%29,easy%20to%20manage%20your%20Amazon%20S3%20objects.%20)
 
+O pipeline para deploy da Lambda Function já está configurado no GitHub Actions, os passos a seguir são apenas de referência para execução manual do deploy.
 
-### Siga os passos:
+### Para execução manual do deploy, siga os passos:
 
 1) Acesse a pasta do projeto com a função `src\LambadaAuth`;
 
@@ -87,7 +88,7 @@ Ao final do processo, a função lambda estará disponível no console da AWS.
 ![api gateway deploy](./docs/api-gateway-deploy.png)
 
 
-### Configuração da Função Lambda
+### Configuração da Função Lambda (já configurada no pipeline)
 
 Um último passo é efetuar o ajuste do time out para a função lambda.
 
